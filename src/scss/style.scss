@@ -444,6 +444,10 @@ footer h2 {
         display: flex;
     }
 
+    .logo:hover {
+        transform: scale(1.5);
+    }
+
     nav a:hover {
     color: #EEEAD4;
     background-color: #315240;
@@ -482,7 +486,6 @@ footer h2 {
     .porfolio {
         width: 50%;
     }
-    
 
     .bigdiv {
         flex-direction: row;
