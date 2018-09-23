@@ -6,12 +6,7 @@
 .container {
     text-align: center;
     font-family: 'Comfortaa';
-}
 
-.abc {
-    display: flex;
-    flex-flow:  row nowrap;
-    justify-content: space-between;
 }
 
 a {
@@ -19,39 +14,62 @@ a {
 }   
 
 .logo {
-  padding: 0.6rem; 
-  display: flex;
-    
-
-  
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;  
-    color: transparent;
-    align-items: center;
-
+    display: none;
 }
 
 nav a {
     display: none;
     
 } 
-/*nav:hover a {
-    display: flex;
-    flex-flow: column nowrap;
-    align-self: flex-end;
-} */
+
 nav .burger {
-    font-size: 3em;
-    display: inline-block;
+    font-size: 4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 1.4rem; 
     color: #315240;
         
 }
 nav .burger::after {
     content: "\2630";
 }
+
+.drop-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+
+  .current {
+    cursor: pointer;
+  }
+
+  .drop-item:hover {
+    background-color: #315240;
+    color: white;
+    
+  }
+
+  .dropdown {
+    height: 0;
+    overflow-y: hidden;
+    
+  }
+
+  .dropdown a {
+      color:  #315240;
+      font-size: 2rem;
+      text-align: center;
+      padding: 0.8rem;
+   
+  }
+
+  .exp .dropdown {
+    height: 50vh;
+  }
 
 /*
    
@@ -176,9 +194,7 @@ h1 {
     background-color:#90A17C;
     padding: 4rem;
     display: flex;
-    /*display: grid;  
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33% ; */
+
     line-height: 2rem;
     flex-direction: column;
     
@@ -216,6 +232,7 @@ h1 {
 
 .abouth2 h2  {
     font-size: 3rem;
+    padding: 2rem;
    
 }
 
@@ -232,7 +249,8 @@ h1 {
         
     align-items: center;
     padding: 0 2rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
 
 }
 
@@ -242,7 +260,7 @@ h1 {
     background-color: #315240;
     color: #EEEAD4;
     background-size: contain;  
-    padding: 1.5rem;  
+    padding: 1.8rem;
      
 }
 
@@ -261,7 +279,7 @@ h1 {
    color: #EEEAD4;
    font-size: 3rem; 
    text-align: center;
-   padding: 1   rem 0;
+   padding: 1.8rem 0;
 
 }
 
@@ -396,10 +414,25 @@ footer h2 {
         
     }
 
-    .logo a:hover {
-        background-color: #FFFFFF;
+    .navlogo {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 0rem;
     }
-    
+
+    .logo {
+        padding: 1rem 1rem 0 1rem;
+        display: flex;
+    }
+
+    nav a:hover {
+    color: #EEEAD4;
+    background-color: #315240;
+    padding: 1.5rem;
+
+    }
+
     .aboutme {
       
        flex-direction: row;
@@ -421,20 +454,17 @@ footer h2 {
       width: calc(50% - 10px); 
     }
 
-    /*.portfolios {
+    .portfolios {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
 
-    } */
-    
-    .portfolios
-    {
-        display: grid;  
-        grid-template-columns: 50% 50% ;
-        grid-template-rows: 25% 25% 25% 25%; 
-        padding: 1rem;
+    } 
+
+    .porfolio {
+        width: 50%;
     }
+    
 
     .bigdiv {
         flex-direction: row;
@@ -463,17 +493,29 @@ footer h2 {
 
 
 @media screen and (min-width: 1000px) {
+    
 
-    .navlist {
+    .menu {
+        padding: 0;
+    }
+
+
+    .dropdown {
+        overflow: visible;
+    }
+
+    .navlist a .drop-item {
+        background-color: transparent;
+        color:#315240;
         display: flex;
         flex-flow: row nowrap;
         align-items: flex-end;
         justify-content: flex-end;
-        padding: 0.3em;
-
+ 
     }
+   
 
-    nav:hover a {
+    nav:hover .dropitem {
         display: flex;
         flex-flow: column nowrap;
         align-self: flex-end;
@@ -481,24 +523,19 @@ footer h2 {
         
     }
 
-    nav a {
-        background-color: #FFFFFF;
-        color:#315240;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: flex-end;
-        justify-content: flex-end;
-        padding: 1.5rem;
-    }
+        .navlist {
+            display: flex;
+            color: #315240;
+        }
 
-    nav a:hover {
+    .navlist a:hover {
     color: #EEEAD4;
     background-color: #315240;
     padding: 1.5rem;
 
     }
 
-    nav a {
+    .navlist .drop-item {
         background-color: #FFFFFF;
         color:#315240;
         display: flex;
@@ -519,26 +556,23 @@ footer h2 {
         text-align: center;
     }
 
-    .portfolios {
-        display: grid;  
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33% ;
+    .porfolio {
+        width: 33%;
     }
 
     a {  
-
         display:inline;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #315240;
         text-decoration: none;
-        padding:1.5rem;
+        padding:0.5rem;
+        
         }
    
     nav .burger {
         display: none;
         padding: 0;
-        
-    
+          
     }
 
     .profileimg img {
@@ -567,27 +601,65 @@ footer h2 {
     }
         
 }
-    
 
+@media screen and (min-width:1440px) {
 
+    h1 {
+        font-size: 4.5rem;
+    }
 
+    .navlist a {
+        font-size: 2.5rem;
+    }
 
+    .dddb p, p {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+}
 
+@media screen and (min-width: 2560px) {
+    h1 {
+        font-size: 6rem;
+        padding-bottom: 28rem;
+    }
 
-
-
-
-
-
-
-
-  
-    
    
 
+    .navlist a {
+        font-size: 3.5rem;
+    }
 
+    p {
+       font-size: 3.4rem;
+       line-height: 4rem;
+    }
 
+    .dddb p, h3,  {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
 
+    .dddb h2, .skill h2, .portfoliotitle h2, .abouth2 h2, h4, .findh2 h2, .formtitle h2, button {
+        font-size: 4.5rem;
+    }
 
-   
+    ::placeholder  {
+        font-size: 3rem;
+    }
+
+    input {
+        line-height: 7rem;
+        padding: 2rem;
+        
+    }
+
+    .perc, .progress .bar, .progress .label, .skill {
+        font-size: 2.8rem;
+       
+        
+    }
+}
+
+    
 

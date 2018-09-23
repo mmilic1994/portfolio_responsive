@@ -11,18 +11,24 @@
     </head>
     <body>
         <div class="container">
-            <div class="abc">
-            <a href="#"><div class="logo"><img src="img/logo.png" alt="logo" height="100px"></div></a>
-            <nav >
-            <div class="burger"></div>
+          <div class="navlogo">
+                <a href="#"><div class="logo"><img src="img/logo.png" alt="logo" height="100px"></div></a>
+            <nav>
+            <div id="menu" class="menu">
+            <div id="current-item" class="burger drop-item"></div>
+            <div class="dropdown">
             <div class="navlist">
-            <a href="#">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Porfolio</a>
-            <a href="#about">About me</a>
-            <a href="#contact">Contact</a>
+              <a href="#" class="drop-item">Home</a>
+              <a href="#skills" class="drop-item">Skills</a>
+              <a href="#portfolio"   class="drop-item">Porfolio</a>
+              <a href="#about" class="drop-item">About me</a>
+              <a href="#contact"   class="drop-item">Contact</a>
+            </div> 
+              </nav>  
             </div>
-            </nav>
+            </div>
+            </div>
+           
         </div>
         </div>
         <div class="container">
@@ -130,32 +136,32 @@
                         <a name="portfolio"><h2>My Portfolio</h2></a>
                     </div>
                     <div class="portfolios">
-                    <div class="porfolio1">
+                    <div class="porfolio">
                         <a href="#"><img src="img/www.png" width="180px" alt="website"></a>
                         <p>  Website for a coffee shop. Student Project for the Coding Bootcamp Praha. 
                             Coded based on provided psd design. </p>
                     </div>
-                    <div class="porfolio2">
+                    <div class="porfolio">
                         <a href="#"><img src="img/www.png" width="180px" alt="website"></a>
                         <p>  Website for a coffee shop. Student Project for the Coding Bootcamp Praha. 
                             Coded based on provided psd design. </p>
                     </div>
-                        <div class="porfolio3">
+                        <div class="porfolio">
                         <a href="#"><img src="img/www.png" width="180px" alt="website"></a>
                         <p>  Website for a coffee shop. Student Project for the Coding Bootcamp Praha. 
                             Coded based on provided psd design. </p>
                     </div>
-                    <div class="porfolio4">
+                    <div class="porfolio">
                         <a href="#"><img src="img/www.png" width="180px" alt="website"></a>
                         <p>  Website for a coffee shop. Student Project for the Coding Bootcamp Praha. 
                             Coded based on provided psd design. </p>
                     </div>
-                    <div class="porfolio5">
+                    <div class="porfolio">
                         <a href="#"><img src="img/www.png" width="180px" alt="website"></a>
                         <p>  Website for a coffee shop. Student Project for the Coding Bootcamp Praha. 
                         Coded based on provided psd design. </p>
                     </div>
-                    <div class="porfolio6">
+                    <div class="porfolio">
                         <a href="#"><img src="img/www.png" width="180px" alt="website"></a>
                         <p>  Website for a coffee shop. Student Project for the Coding BootcamPraha. 
                             Coded based on provided psd design. </p>
@@ -226,6 +232,7 @@
         <footer>
             <h2>Nice to meet you!</h2>
             <p>Copyright &copy; Mateo Milić 2018</p>
+            <script src="/main.js"></script>
         </footer>
         </div>
     </body>
