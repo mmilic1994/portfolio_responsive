@@ -56,6 +56,7 @@ nav .burger::after {
   .dropdown {
     height: 0;
     overflow-y: hidden;
+    transition: 1s;
     
   }
 
@@ -182,8 +183,9 @@ h1 {
     height: 2.4rem;
     background-color: #d6d6d6;
     line-height: 2.4rem;
+    
   }
-  
+
   .progress .knob {
     height: 2.4rem;
     background-color: #315240;
@@ -264,6 +266,11 @@ h1 {
      
 }
 
+.aboutdescription h4:hover {
+    transform: scale(0.8);
+    transition: 1s;
+}
+
 .find_me_here {
     background-color: #315240;
     display: flex;
@@ -293,6 +300,11 @@ h1 {
     width: calc(32% -20px);
     margin: 1rem;
 }
+
+.git:hover, .linkedin:hover, .instagram:hover {
+    transform:scale(1.2);
+    transition: 1s;
+}   
  
 .form {
     display: flex;
@@ -384,6 +396,12 @@ button {
     font-family: 'Comfortaa';
     font-size: 1.5rem;
     margin-top: 2rem;
+}
+
+button:hover {
+
+    transform: scale(0.8);
+    transition: 1s;
 }
 
 
