@@ -12,6 +12,9 @@
 
     </head>
     <body>
+      <div class="thanks">
+        Thanks for your email.
+      </div>
         <div class="container">
           <div class="navlogo">
                 <a href="#"><div class="logo"><img src="img/logo.png" alt="logo" height="100px"></div></a>
@@ -216,14 +219,14 @@
                 <div class="formtitle">
                     <h2>Contact me</h2>
                 </div>
-                <form id="contact" action="" method="post"> 
+                <form id="contact" action="contact.php" method="post"> 
                 <div class="bigdiv">
-                    <div class="firstname"><input placeholder="First Name*" type="text" tabindex="1" required></div>
-                    <div class="lastname"><input placeholder="Last Name*" type="email" tabindex="2" required></div>
-                    <div class="email"><input placeholder="Email*" type="url" tabindex="3" required></div>
-                    <div class="phone"><input placeholder="Phone" type="tel" tabindex="4" required></div>
+                    <div class="firstname"><input placeholder="First Name*" type="text" name="firstName" tabindex="1" required></div>
+                    <div class="lastname"><input placeholder="Last Name*" type="text" name="lastName" tabindex="2" required></div>
+                    <div class="email"><input placeholder="Email*" type="email" name="email" tabindex="3" required></div>
+                    <div class="phone"><input placeholder="Phone" type="tel" name="phone" tabindex="4" required></div>
                 </div>
-                <div class="message"> <textarea placeholder="Your message*" tabindex="5" required></textarea></div>
+                <div class="message"> <textarea placeholder="Your message*" tabindex="5" name="message" required></textarea></div>
                 <div class="button"><button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send my message</button></div>
                  </form>
             </div> 
